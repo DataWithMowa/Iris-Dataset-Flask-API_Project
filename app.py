@@ -1,7 +1,6 @@
 import pickle
 from flask import Flask, request, jsonify
 import numpy as np
-import threading
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -17,7 +16,7 @@ def predict():
     data = request.get_json()
     
     # Ensure data is in the correct format (should be a list of 4 feature values)
-    if not data or len(data['features']) != 4:
+    if not data or 'features' not in data or len(data['features']) != 4:
         return jsonify({"error": "Invalid input data"}), 400
     
     # Convert input data into numpy array for prediction
@@ -32,10 +31,5 @@ def predict():
     # Return the prediction result in JSON format
     return jsonify({"predicted_species": species[prediction[0]]})
 
-# Run the application in a separate thread
-def run_flask():
-    app.run(debug=True, use_reloader=False)  # use_reloader=False to prevent double execution in notebook
-
-# Start the Flask app in a separate thread
-thread = threading.Thread(target=run_flask)
-thread.start()
+if __name__ == "__main__":
+    app.run()
