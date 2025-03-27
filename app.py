@@ -33,4 +33,5 @@ def predict():
     return jsonify({"predicted_species": species[prediction[0]]})
 
 if __name__ == '__main__':
-	app.run(debug=True)
+    port = int(os.getenv("PORT", 5000))  # Get port from environment or default to 5000
+    app.run(host="0.0.0.0", port=port, debug=True)  # Run Flask app
