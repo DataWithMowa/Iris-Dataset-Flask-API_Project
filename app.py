@@ -31,8 +31,3 @@ def predict():
 
 # Return the prediction result in JSON format
     return jsonify({"predicted_species": species[prediction[0]]})
-
-if __name__ == "__main__":
-    # Use environment variable PORT for Railway, default to 5000 locally
-    port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
