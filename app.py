@@ -31,3 +31,6 @@ def predict():
 
 # Return the prediction result in JSON format
     return jsonify({"predicted_species": species[prediction[0]]})
+
+if __name__ == '__main__':
+	app.run(debug=True)
