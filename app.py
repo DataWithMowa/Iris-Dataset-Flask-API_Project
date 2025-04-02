@@ -1,14 +1,25 @@
 from flask import Flask, request, jsonify
-from waitress import serve
+import numpy as np
+import joblib
+from asgiref.wsgi import WsgiToAsgi  
 
 app = Flask(__name__)
 
+# Load the pre-trained model
+model = joblib.load('iris_model.pkl') 
+iris_classes = ['setosa', 'versicolor', 'virginica']
+
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.get_json()
-    features = data['features']
-    # Replace this with your model logic
-    return jsonify({'prediction': features[0]})  # Example response
+    try:
+        data = request.get_json()
+        features = data['features']  # Expecting [5.1, 3.5, 1.4, 0.2]
+        features_array = np.array(features).reshape(1, -1)
+        prediction = model.predict(features_array)[0]
+        species = iris_classes[prediction]
+        return jsonify({'prediction': species})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
-if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5000)  # Use Waitress instead of app.run()
+# Wrap the Flask WSGI app in an ASGI adapter
+app = WsgiToAsgi(app)
