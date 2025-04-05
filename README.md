@@ -304,19 +304,31 @@ Here’s an explanation of the tools and libraries used in your Iris Prediction 
   
 This app is awesome, but it’s not perfect! Here are some things it can’t do:
 
-- Only Works for Iris Flowers: It’s trained on the Iris dataset, so it can only predict "setosa," "versicolor," or "virginica." It won’t work for other flowers or anything else.
+- **Only Works for Iris Flowers**: It’s trained on the Iris dataset, so it can only predict "setosa," "versicolor," or "virginica." It won’t work for other flowers or anything else.
   
-- Needs Four Numbers: You have to give it exactly four measurements (sepal length, sepal width, petal length, petal width) in the right order, or it’ll get confused.
+- **Needs Four Numbers**: You have to give it exactly four measurements (sepal length, sepal width, petal length, petal width) in the right order, or it’ll get confused.
   
-- No Fancy Explanations: It just tells you the flower type—it doesn’t explain why or show you the math behind it.
+- **No Fancy Explanations**: It just tells you the flower type—it doesn’t explain why or show you the math behind it.
   
-- Simple Online Version: If you use it online with Railway, anyone with the link can try it.
+- **Simple Online Version**: If you use it online with Railway, anyone with the link can try it.
   
-- Depends on the Model: The predictions are only as good as the iris_model.pkl file. If it’s not perfect, the app won’t be either.
+- **Depends on the Model**: The predictions are only as good as the iris_model.pkl file. If it’s not perfect, the app won’t be either.
   
 </details>
 
 ## Challenges Faced:
+<details> <summary>Click to expand</summary> <br>
+  
+Getting this app up and running wasn’t easy. It took a lot of patience and trial-and-error! Here’s what I ran into and how I got through it:
+
+**Deployment Headaches**: I tried deploying this app on Railway more than 20 times before anything worked. The build process kept failing because of things like wrong Python versions, missing packages, or modules that wouldn’t install. One error even said a package needed Rust (a programming tool) to build, but Railway didn’t have it ready. Figuring out what went wrong each time took many hours of debugging!
+
+**Finally Deployed, Then Crashed**: Around the 30th or 40th try, the app built successfully but then it crashed right after. More attempts followed (maybe 50 in total!), fixing things like Python mismatches, Windows-specific issues, and missing libraries.
+
+**Public URL Trouble**: Even after it deployed successfully, the app wouldn’t work as a public URL. I spent another chunk of time testing and tweaking until the curl command finally worked. It was a long road, but it paid off! Whew!
+
+This taught me that deploying an app can be tricky, especially when tools don’t play nice together. If you hit bumps like these, don’t give up, keep trying, check the error messages, and adjust step-by-step. It’s all worth it when it finally works!
+</details>
 
 ## Summary:
 <details> <summary>Click to expand</summary> <br>
