@@ -1,10 +1,10 @@
-# Iris Dataset Flask API Project
+# 🌸 Iris Dataset Flask API Project
 
 <div align="center">
   <img src="Iris Image copy.png"="iris Flower Image" width="auto" height="auto">
 </div>
 
-## Introduction: 
+## 📘 Introduction: 
 <details>
   <summary>Click to expand</summary>
   <br>
@@ -22,7 +22,7 @@ This README will guide you through setup, usage, and contributing to the project
 
 </details>
 
-## Project Objective:
+## 🎯 Project Objective:
 <details>
   <summary>Click to expand</summary>
  <br>
@@ -30,7 +30,7 @@ This README will guide you through setup, usage, and contributing to the project
 The objective of this project is to create a lightweight Flask-based RESTful API that enables users to predict the species of an Iris flower by providing its sepal and petal measurements. It aims to demonstrate a practical deployment of a machine learning model, offering an accessible and educational tool for real-time classification of the Iris dataset.
  </details>
 
-## How To Create This Flask App Locally:
+## 🖥️ How To Create This Flask App Locally:
 <details>
   <summary>Click to expand</summary>
 
@@ -235,7 +235,7 @@ I’ve hosted this app at `https://web-production-182ae.up.railway.app`. Try it 
 Enjoy your Iris Prediction App!
 </details>
 
-## Data Overview:
+## 📂 Data Overview:
 <details>
   <summary>Click to expand</summary>
   <br>
@@ -254,7 +254,7 @@ The app’s pre-trained model uses these four numbers (sepal length, sepal width
 
 </details>
 
-## Tools and Libraries Used:
+## ⚙️ Tools and Libraries Used:
 <details>
   <summary>Click to expand</summary>
   <br>
@@ -299,7 +299,7 @@ Here’s an explanation of the tools and libraries used in your Iris Prediction 
 
 </details>
 
-## Limitations:
+## 🚧 Limitations:
 <details> <summary>Click to expand</summary> <br>
   
 This app is awesome, but it’s not perfect! Here are some things it can’t do:
@@ -316,7 +316,7 @@ This app is awesome, but it’s not perfect! Here are some things it can’t do:
   
 </details>
 
-## Challenges Faced:
+## 🔥 Challenges Faced:
 <details> <summary>Click to expand</summary> <br>
   
 Getting this app up and running wasn’t easy. It took a lot of patience and trial-and-error! Here’s what I ran into and how I got through it:
@@ -330,7 +330,7 @@ Getting this app up and running wasn’t easy. It took a lot of patience and tri
 This taught me that deploying an app can be tricky, especially when tools don’t play nice together. If you hit bumps like these, don’t give up, keep trying, check the error messages, and adjust step-by-step. It’s all worth it when it finally works!
 </details>
 
-## Summary:
+## 🔎 Summary:
 <details> <summary>Click to expand</summary> <br>
   
 This Iris Prediction App is a simple way to guess Iris flower types using four measurements! 
@@ -340,4 +340,7 @@ You can run it on your computer with a friendly webpage or put it online with Ra
 Whether you’re testing it locally with a browser or sharing it online with Postman, it’s an easy way to see machine learning in action. Enjoy predicting flowers!
 
 </details>
+
+## 😊 Enjoy Coding!
+
 
